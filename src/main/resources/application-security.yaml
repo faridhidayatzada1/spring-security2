@@ -1,0 +1,5 @@
+security-jwt:
+  jwtProperties:
+    secret: a-string-secret-at-least-256-bits-long
+    tokenValidateTokens: 300
+    refreshTokenValidateTokens: 600
