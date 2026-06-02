@@ -33,6 +33,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/students/role-admin").hasRole("ADMIN")
                         .requestMatchers("/students/role-user").hasRole("USER")
+                        .requestMatchers("/auth/jwt-test1").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(Customizer.withDefaults()); // Spring-in daxili login səhifəsi
